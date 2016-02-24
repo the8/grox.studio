@@ -1,0 +1,126 @@
+.navbar-default {
+  border-bottom-width: medium;
+  background: url('/images/texture/diagonal-noise.png'), linear-gradient(180deg, $grox-argile, darken($grox-argile, 15%)), center no-repeat $grox-anthracite scroll;
+
+  .navbar-brand {
+    font-family: $headings-font-family;
+    font-weight: bold;
+  }
+
+  .navbar-nav > li > a:hover {
+    background-image: url('/images/texture/negate/diagonal-noise.png');
+    background-color: linear-gradient(180deg, $navbar-default-link-hover-bg, darken($navbar-default-link-hover-bg, 40%)), $navbar-default-link-hover-bg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:hover,
+  .navbar-nav > .active > a:focus {
+    background: url('/images/texture/diagonal-noise.png'), linear-gradient(180deg, $grox-lunaire, darken($grox-lunaire, 15%)), center no-repeat $grox-lunaire scroll;
+  }
+}
+
+.btn-default {
+  background: url('/images/texture/diagonal-noise.png'), linear-gradient(180deg, darken($grox-anthracite, 20%), darken($grox-anthracite, 15%)), center no-repeat $grox-anthracite scroll;
+  text-shadow: 0 0 8px $grox-anthracite;
+  -webkit-box-shadow: inset 0 0 3px darken($grox-anthracite, 5%);
+  box-shadow: inset 0 0 3px darken($grox-anthracite, 5%);
+
+  &:hover {
+    background: url('/images/texture/diagonal-noise.png'), center no-repeat $grox-anthracite scroll;
+  }
+}
+
+.btn-primary {
+  background: url('/images/texture/diagonal-noise.png'), linear-gradient(180deg, lighten($grox-fuchsia, 5%), $grox-fuchsia), center no-repeat $grox-anthracite scroll;
+  text-shadow: 0 0 8px $grox-fuchsia;
+  -webkit-box-shadow: inset 0 0 3px darken($grox-fuchsia, 5%);
+  box-shadow: inset 0 0 3px darken($grox-fuchsia, 5%);
+
+  &:hover {
+    background: url('/images/texture/diagonal-noise.png'), linear-gradient(180deg, darken($grox-fuchsia, 20%), darken($grox-fuchsia, 15%)), center no-repeat $grox-anthracite scroll;
+  }
+}
+
+.btn-success {
+  background: url('/images/texture/diagonal-noise.png'), linear-gradient(180deg, lighten($grox-chartreuse, 5%), $grox-chartreuse), center no-repeat $grox-anthracite scroll;
+  text-shadow: 0 0 8px $grox-chartreuse;
+  -webkit-box-shadow: inset 0 0 3px darken($grox-chartreuse, 5%);
+  box-shadow: inset 0 0 3px darken($grox-chartreuse, 5%);
+
+  &:hover {
+    background: url('/images/texture/diagonal-noise.png'), linear-gradient(180deg, darken($grox-chartreuse, 20%), darken($grox-chartreuse, 15%)), center no-repeat $grox-anthracite scroll;
+  }
+}
+
+.jumbotron {
+  color: $grox-lait;
+  font-family: $font-family-serif;
+  background: url('/images/texture/stardust.png'), $grox-anthracite;
+}
+
+.panel-title {
+  font-size: 20px;
+}
+
+.admin-tools {
+  color: $grox-chartreuse;
+  background-color: $grox-anthracite;
+  background-image: url('/images/texture/carbon_fibre.png');
+  -webkit-box-shadow: inset 0 0 5px darken($grox-anthracite, 10%);
+  box-shadow: inset 0 0 5px darken($grox-anthracite, 10%);
+}
+
+.breadcrumb {
+  font-size: $font-size-small;
+  border: 1px solid darken($grox-argile, 10%);
+  background-image: url('/images/texture/diagonal-noise.png');
+  text-shadow: 0 0 10px $grox-lait;
+}
+
+body {
+  background-image: url('/images/texture/old_moon.png');
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+tbody > tr {
+  background-image: url('/images/texture/old_moon.png');
+}
+
+h1, h2 {
+  font-family: 'Orbitron', $font-family-serif;
+}
+
+.navbar-brand > img {
+  margin-top: -7px;
+  width: 119px;
+}
+
+.avatar {
+  line-height: 0;		/* remove line-height */ 
+  display: inline-block;	/* circle wraps image */
+  margin: 5px;
+  border: 2px solid darken($grox-argile, 10%);
+  border-radius: 4%;	/* relative value */
+  /*box-shadow: 0px 0px 5px rgba(0,0,0,0.4);*/
+  transition: linear 0.25s;
+  height: 104px;
+  width: 104px;
+}
+
+.avatar img {
+  border-radius: 4%;
+}
+
+.avatar:hover {
+	transition: ease-out 0.2s;
+  border: 2px solid $brand-primary;
+  -webkit-transition: ease-out 0.2s;
+}
+
+a.avatar {
+  color: transparent;
+} /* IE fix: removes blue border */	

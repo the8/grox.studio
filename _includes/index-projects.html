@@ -1,0 +1,37 @@
+<div class="well">
+  <h2>
+    <img src="/images/lab.svg" alt="" width="48">
+    Projects
+  </h2>
+  <div class="row">
+    <div class="col-sm-12">
+      {% for project in site.github.public_repositories %}
+        {% if site.data.projects contains project.name %}
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        <div>
+        {% if project.html_url %}
+          <a class="btn btn-sm btn-default" href="{{ project.html_url }}">
+            <i class="fa fa-github fa-lg"></i>
+            GitHub
+          </a>
+        {% endif %}
+        {% if project.homepage %}
+          <a class="btn btn-sm btn-default" href="{{ project.homepage }}">
+            <i class="fa fa-globe fa-lg"></i>
+            Homepage
+          </a>
+        {% endif %}
+        </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      <a href="{{ "/projects" | prepend: site.baseurl }}">
+        <small>more projects...</small>
+      </a>
+    </div>
+  </div>
+</div>

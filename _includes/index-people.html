@@ -1,0 +1,26 @@
+<div class="well">
+  <h2>
+    <img src="/images/id-card.svg" alt="" width="48">
+    People
+  </h2>
+  {% for person in site.data.people %}
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>{{ person.name }}</h3>
+        <p>{{ person.summary }}</p>
+        {% if person.homepage %}
+        <a class="btn btn-sm btn-default" href="{{ person.homepage }}">
+          <i class="fa fa-globe fa-lg"></i>
+          Homepage
+        </a>
+        {% endif %}
+        {% if person.github_user %}
+        <a class="btn btn-sm btn-default" href="http://github.com/{{ person.github_user }}">
+          <i class="fa fa-github fa-lg"></i>
+          GitHub
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

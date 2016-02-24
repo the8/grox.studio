@@ -1,0 +1,53 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.welcome-index {
+
+  > div.jumbotron {
+    border-bottom: 2px solid $grox-fer;
+
+    > div > div > div.col-sm-8 > h1 {
+      color: $grox-absinthe;
+    }
+
+    > div > div > div.col-sm-4 > div {
+      margin: 0;
+      float: right;
+      border: 1px solid $grox-fer;
+      background-color: rgba(0, 0, 0, 0.01);
+      background-image: url('/images/texture/negate/diagonal-noise.png');
+    }
+
+    > div > div > div.col-sm-4.col-md-3 > div > div > h3 {
+      margin-top: 0;
+    }
+  }
+
+  > div.container {
+
+    > div > div.col-sm-5 > div > h2,
+    > div > div.col-sm-7 > div > h2 {
+      margin-top: -10px;
+      margin-left: -19px;
+      font-size: 27px;
+    }
+
+    > div > div.col-sm-5 > div > div > div > h3,
+    > div > div.col-sm-7 > div > div > div > h3 {
+      font-family: $font-family-serif;
+    }
+
+    > div > div.col-sm-5.col-md-4 > div {
+      border-left: 3px solid $grox-absinthe;
+    }
+
+    > div > div.col-sm-5.col-md-4 > div:nth-child(2) {
+      border-left: 3px solid $grox-electrique;
+    }
+
+    > div > div.col-sm-7 > div {
+      border-left: 3px solid $grox-bonbon;
+    }
+  }
+}

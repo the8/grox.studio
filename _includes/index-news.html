@@ -1,0 +1,35 @@
+<div class="well">
+  <h2>
+    <img src="/images/blog.svg" alt="" width="48">
+    Recent News
+  </h2>
+  {% for post in site.posts %}
+    {% if forloop.index > site.index_post_limit %}{% break %}{% endif %}
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>
+          {{ post.title }}
+          <br>
+          <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+        </h3>
+        {{ post.content }}
+        {% if post.tags != empty %}
+        <p>
+          <small><i class="fa fa-tags"></i></small>
+          &nbsp;
+          {% for tag in post.tags %}
+            <small class="label label-default">{{ tag }}</small>
+          {% endfor %}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      <a href="{{ "/posts" | prepend: site.baseurl }}">
+        <small>more posts...</small>
+      </a>
+    </div>
+  </div>
+</div>
